@@ -14,6 +14,11 @@ class Launch : AppCompatActivity() {
         //antes produzir o conteudo da tela faça...
         // deixando a tela fullscreen, sem barra de status
 
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
+
 
         setContentView(R.layout.activity_launch)
 
