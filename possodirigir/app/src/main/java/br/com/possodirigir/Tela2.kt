@@ -22,5 +22,16 @@ class Tela2 : AppCompatActivity() {
                 }
         val arrayAdaptado = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, arrayIdades)
         spnIdade.adapter = arrayAdaptado
+        //Verificando a idade e exibindo o resultado
+        btnCalcular.setOnClickListener {
+            //capturar idade selecioanda
+            val idadeSelecionada = spnIdade.selectedItem.toString().toInt();
+            //comparando a idade capturada
+            if(idadeSelecionada >= 18){
+                txvResultado.text = " Pode dirigir"
+            }else{
+                txvResultado.text = "Não pode dirigir..."
+            }
+        }
     }
 }
